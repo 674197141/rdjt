@@ -1,0 +1,29 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:5050/api/zhuce
+Content-Type: application/json
+
+{
+  "user_name": "测试123",
+  "password": "abc1234",
+  "phone": "15831579730",
+  "birthdata": "2019-02-03",
+  "token": "abcsssss"
+}
+
+###
+POST http://localhost:5050/api/login
+Content-Type: application/json
+
+{
+  "user_name": "测试123",
+  "password": "abc1233"
+}
+
+###

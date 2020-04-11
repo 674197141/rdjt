@@ -3,6 +3,7 @@ import json
 from flask import Blueprint, request, make_response, jsonify, Response
 
 from api_lib.flask_pydantic.core import decorate
+from app.model.user import User
 from app.model.user_view_model import Login, ZhuCe
 
 admin = Blueprint('admin', __name__)
@@ -33,18 +34,16 @@ def to__response(data, status_code: int = 200, just_str: bool = False) -> Respon
 
 
 # 登录
-@admin.route('login', methods=['GET'])
+@admin.route('login', methods=['POST'])
 @decorate
 def get_user_log(body_model: Login):
-    user_id = str(user_id)
-    r, s = AdminUser.get_user_log(user_id, query_model)
+    r, s = User.login(body_model)
     return to__response(r, s)
 
 
 # 注册
-@admin.route('/admin/upload/user', methods=['POST'])
+@admin.route('zhuce', methods=['POST'])
 @decorate
 def upload_user(body_model: ZhuCe):
-    user_excel = request.files['user_excel']
-    r, s = AdminUser.upload_user(user_excel)
+    r, s = User.zhuce(body_model)
     return to__response(r, s)

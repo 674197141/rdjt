@@ -57,16 +57,12 @@ LOGGING_SETTING = {'level': logging_level,
                    'max_bytes': 5 * 1024 * 1024,
                    'backup_count': 10,
                    }
-# rrbac匿名用户权限
-RRBAC_ANONYMOUS_ROLE = 'Anon'
-# 权限数据库
+#
 SQLALCHEMY_POOL_SIZE = 30
 SQLALCHEMY_POOL_TIMEOUT = 15
 SQLALCHEMY_ECHO = False
 SQLALCHEMY_RECORD_QUERIES = True
-# SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://isizy:tvOX09@61.149.7.193:33060/isizy_db?charset=utf8mb4'
-# SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://isizy:tvOX09@192.168.1.45:33060/isizy_db?charset=utf8mb4'
-# SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://isizy:tvOX09@mysql:3306/isizy_db?charset=utf8mb4'
+SQLALCHEMY_DATABASE_URI = 'mysql://root:mv2H)jMs9AFO-gCD@47.92.166.30:3306/Data_platfrom?charset=utf8mb4'
 # 是否启用sql调试
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 # SQLALCHEMY_TRACK_MODIFICATIONS = False

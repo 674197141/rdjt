@@ -1,0 +1,76 @@
+[2020-04-11 16:35:20] [INFO] [__init__] [<module>] [154] 创建数据库
+[2020-04-11 16:35:20] [INFO] [__init__] [<module>] [158] ------------启动成功------------
+[2020-04-11 16:39:48] [ERROR] [app] [log_exception] [1891] Exception on /api/zhuce [POST]
+Traceback (most recent call last):
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Interview\ceshiti\润德冀图\flask_demo\api_lib\flask_pydantic\core.py", line 203, in wrapper
+    res = func(*args, **kwargs)
+  File "D:\Interview\ceshiti\润德冀图\flask_demo\app\views\admin.py", line 48, in upload_user
+    r, s = User.zhuce(body_model)
+  File "D:\Interview\ceshiti\润德冀图\flask_demo\app\model\user.py", line 21, in zhuce
+    user = UserDb.query.filter(body_model.user_name).first()
+  File "<string>", line 2, in filter
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\orm\base.py", line 220, in generate
+    fn(self, *args[1:], **kw)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\orm\query.py", line 1789, in filter
+    criterion = expression._expression_literal_as_text(criterion)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4556, in _expression_literal_as_text
+    return _literal_as_text(element)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4579, in _literal_as_text
+    return _literal_as(element, _no_text_coercion)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4565, in _literal_as
+    return text_fallback(element)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4609, in _no_text_coercion
+    "extra": "%s " % extra if extra else "",
+sqlalchemy.exc.ArgumentError: Textual SQL expression '测试123' should be explicitly declared as text('测试123')
+[2020-04-11 16:40:15] [INFO] [__init__] [<module>] [154] 创建数据库
+[2020-04-11 16:40:16] [INFO] [__init__] [<module>] [158] ------------启动成功------------
+[2020-04-11 16:41:08] [INFO] [__init__] [<module>] [154] 创建数据库
+[2020-04-11 16:41:08] [INFO] [__init__] [<module>] [158] ------------启动成功------------
+[2020-04-11 16:42:01] [ERROR] [app] [log_exception] [1891] Exception on /api/login [POST]
+Traceback (most recent call last):
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Interview\ceshiti\润德冀图\flask_demo\api_lib\flask_pydantic\core.py", line 203, in wrapper
+    res = func(*args, **kwargs)
+  File "D:\Interview\ceshiti\润德冀图\flask_demo\app\views\admin.py", line 40, in get_user_log
+    r, s = User.login(body_model)
+  File "D:\Interview\ceshiti\润德冀图\flask_demo\app\model\user.py", line 9, in login
+    user = UserDb.query.filter(body_model.user_name).first()
+  File "<string>", line 2, in filter
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\orm\base.py", line 220, in generate
+    fn(self, *args[1:], **kw)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\orm\query.py", line 1789, in filter
+    criterion = expression._expression_literal_as_text(criterion)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4556, in _expression_literal_as_text
+    return _literal_as_text(element)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4579, in _literal_as_text
+    return _literal_as(element, _no_text_coercion)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4565, in _literal_as
+    return text_fallback(element)
+  File "D:\develop-Language\Python\space_env\work_api\lib\site-packages\sqlalchemy\sql\elements.py", line 4609, in _no_text_coercion
+    "extra": "%s " % extra if extra else "",
+sqlalchemy.exc.ArgumentError: Textual SQL expression '测试123' should be explicitly declared as text('测试123')
+[2020-04-11 16:42:24] [INFO] [__init__] [<module>] [154] 创建数据库
+[2020-04-11 16:42:24] [INFO] [__init__] [<module>] [158] ------------启动成功------------

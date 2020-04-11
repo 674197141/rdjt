@@ -4,10 +4,7 @@ import os
 import sys
 from datetime import datetime
 from decimal import Decimal
-import casbin
 import pymysql
-import redis
-from DBUtils.PooledDB import PooledDB
 from flask import Flask
 from flask_compress import Compress
 from flask_sqlalchemy import SQLAlchemy
@@ -42,9 +39,7 @@ def get_dict_conn(db_name="model"):
 
 app = Flask(__name__)
 
-import flask_excel as excel
 
-excel.init_excel(app)
 Compress(app)
 app.config.from_object(config)
 print('===========加载配置文件============')
@@ -156,8 +151,8 @@ app.json_encoder = JSONEncoder
 
 from app import views
 
+Logger.info("创建数据库")
+db.create_all()
 
-
-Logger.info('=========启动线程池========')
 
 Logger.info("------------启动成功------------")
